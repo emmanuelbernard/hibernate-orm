@@ -40,6 +40,8 @@ public class EmptyInterceptor implements Interceptor, Serializable {
 	public static final Interceptor INSTANCE = new EmptyInterceptor();
 
 	protected EmptyInterceptor() {
+		final java.time.ZoneId id = java.time.ZoneId.systemDefault();
+		System.out.println( id.getId() );
 	}
 
 	@Override
